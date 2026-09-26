@@ -94,7 +94,7 @@ services:
     build:
       context: ./web
       dockerfile: Dockerfile
-    args:
+      args:
         NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${NEXT_PUBLIC_TURNSTILE_SITE_KEY}
     restart: always
 
