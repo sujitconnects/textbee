@@ -29,6 +29,9 @@ COPY . .
 # Set environment variables for building
 ENV NEXT_TELEMETRY_DISABLED 1
 
+# Turnstile public site key must be available during Next.js build
+ARG NEXT_PUBLIC_TURNSTILE_SITE_KEY
+ENV NEXT_PUBLIC_TURNSTILE_SITE_KEY=${NEXT_PUBLIC_TURNSTILE_SITE_KEY}
 
 # Build the application
 RUN pnpm build
