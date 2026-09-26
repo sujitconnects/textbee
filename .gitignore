@@ -7,3 +7,6 @@
 .omc/
 # Rendered email previews (pnpm preview:emails)
 api/tmp/
+*.json
+sms-gateway-d346b-firebase-adminsdk-fbsvc-7a8380c1ea.json
+**/*firebase-adminsdk*.json
