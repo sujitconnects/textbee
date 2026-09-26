@@ -9,8 +9,8 @@ services:
 
     restart: always
 
-    ports:
-      - "3001:3001"
+    expose:
+      - "3001"
 
     environment:
       PORT: 3001
@@ -95,8 +95,8 @@ services:
 
     restart: always
 
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
 
     environment:
       PORT: 3000
