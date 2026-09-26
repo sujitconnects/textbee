@@ -11,6 +11,9 @@ services:
     expose:
       - "3001"
 
+    labels:
+      - "traefik.docker.network=dokploy-network"
+
     environment:
       PORT: 3001
       MONGO_URI: ${MONGO_URI}
@@ -96,6 +99,9 @@ services:
 
     expose:
       - "3000"
+
+    labels:
+      - "traefik.docker.network=dokploy-network"
 
     environment:
       PORT: 3000
