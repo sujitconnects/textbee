@@ -1,7 +1,6 @@
 services:
 
   textbee-api:
-    container_name: textbee-api
 
     build:
       context: ./api
@@ -84,10 +83,10 @@ services:
 
     networks:
       - textbee-network
+      - dokploy-network
 
 
   textbee-web:
-    container_name: textbee-web
 
     build:
       context: ./web
@@ -136,10 +135,10 @@ services:
 
     networks:
       - textbee-network
+      - dokploy-network
 
 
   textbee-redis:
-    container_name: textbee-redis
 
     image: redis:alpine
 
@@ -164,6 +163,8 @@ services:
 networks:
   textbee-network:
     driver: bridge
+  dokploy-network:
+    external: true
 
 
 volumes:
